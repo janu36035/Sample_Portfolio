@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .form-container {
+            width: 650px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        fieldset {
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .form-group > label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 9px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+        }
+
+        .radio-group input,
+        .checkbox-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .register {
+            background-color: #18392b;
+            color: white;
+        }
+
+        .clear {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Student Registration Form</h1>
+
+        <form>
+
+            <!-- Personal Information -->
+
+            <fieldset>
+
+                <legend>Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="form-group">
+
+                    <label>Gender:</label>
+
+                    <div class="radio-group">
+
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Course and Skills -->
+
+            <fieldset>
+
+                <legend>Course & Skills</legend>
+
+                <div class="form-group">
+
+                    <label for="course">Course:</label>
+
+                    <select id="course" name="course">
+
+                        <option value="">Select a course</option>
+                        <option value="java">Java Full Stack</option>
+                        <option value="python">Python Full Stack</option>
+                        <option value="web">Web Development</option>
+                        <option value="data">Data Science</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Skills:</label>
+
+                    <div class="checkbox-group">
+
+                        <label>
+                            <input type="checkbox" name="skills" value="html">
+                            HTML
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="css">
+                            CSS
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="java">
+                            Java
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="react">
+                            React
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Address -->
+
+            <fieldset>
+
+                <legend>Address Information</legend>
+
+                <div class="form-group">
+
+                    <label for="address">Address:</label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="5"
+                        placeholder="Enter your complete address">
+                    </textarea>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Documents -->
+
+            <fieldset>
+
+                <legend>Documents</legend>
+
+                <div class="form-group">
+
+                    <label for="resume">Resume:</label>
+
+                    <input
+                        type="file"
+                        id="resume"
+                        name="resume">
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Terms -->
+
+            <fieldset>
+
+                <legend>Confirmation</legend>
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    required>
+
+                <label for="terms">
+                    I agree to the terms and conditions
+                </label>
+
+            </fieldset>
+
+
+            <!-- Buttons -->
+
+            <div class="button-group">
+
+                <button type="submit" class="register">
+                    Register
+                </button>
+
+                <button type="reset" class="clear">
+                    Clear
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie Corner</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f3e8;
+            color: #333;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            text-align: center;
+            background-color: #5a2d1c;
+            color: white;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+
+        /* ================= MENU SECTION ================= */
+
+        .menu-section {
+            position: relative;
+
+            padding: 35px;
+            margin-bottom: 30px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+        }
+
+
+        /* Background images */
+
+        .breakfast {
+            background-image: url("../images/breakfast.png");
+        }
+
+        .lunch {
+            background-image: url("../images/lunch.png");
+        }
+
+        .beverages {
+            background-image: url("../images/beverages.png");
+        }
+
+
+        /* White transparent layer */
+
+        .menu-section::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+
+        /* Keep content above overlay */
+
+        .menu-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        /* ================= SECTION HEADING ================= */
+
+        .menu-section h2 {
+            text-align: center;
+
+            color: #5a2d1c;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+
+            padding-bottom: 10px;
+
+            border-bottom: 2px solid #d89b45;
+        }
+
+
+        /* ================= MENU ITEM ================= */
+
+        .menu-item {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 16px 5px;
+
+            border-bottom: 1px solid rgba(90, 45, 28, 0.2);
+        }
+
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+
+        /* ================= FOOD INFORMATION ================= */
+
+        .item-info h3 {
+            color: #333;
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .item-info p {
+            color: #666;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= PRICE ================= */
+
+        .price {
+            color: #5a2d1c;
+
+            font-weight: bold;
+
+            font-size: 18px;
+
+            white-space: nowrap;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            background-color: #5a2d1c;
+
+            color: white;
+
+            padding: 20px;
+
+            margin-top: 40px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+
+            .menu-section {
+                padding: 25px 20px;
+            }
+
+            .menu-item {
+                align-items: flex-start;
+            }
+
+            .item-info h3 {
+                font-size: 18px;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>Foodie Corner</h1>
+
+        <p>Delicious Food • Happy Moments</p>
+
+    </header>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+
+        <!-- ================= BREAKFAST ================= -->
+
+        <section class="menu-section breakfast">
+
+            <h2>Breakfast</h2>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Masala Dosa</h3>
+
+                    <p>
+                        Crispy dosa served with potato masala and chutney
+                    </p>
+
+                </div>
+
+                <span class="price">₹90</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Idly</h3>
+
+                    <p>
+                        Soft steamed idlis served with sambar and chutney
+                    </p>
+
+                </div>
+
+                <span class="price">₹50</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Poori</h3>
+
+                    <p>
+                        Fluffy pooris served with delicious potato curry
+                    </p>
+
+                </div>
+
+                <span class="price">₹60</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Vada</h3>
+
+                    <p>
+                        Crispy South Indian vada served with sambar
+                    </p>
+
+                </div>
+
+                <span class="price">₹45</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= LUNCH ================= -->
+
+        <section class="menu-section lunch">
+
+            <h2>Lunch</h2>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Chicken Biryani</h3>
+
+                    <p>
+                        Fragrant basmati rice cooked with spicy chicken
+                    </p>
+
+                </div>
+
+                <span class="price">₹180</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Veg Biryani</h3>
+
+                    <p>
+                        Flavorful rice cooked with fresh vegetables
+                    </p>
+
+                </div>
+
+                <span class="price">₹150</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Fried Rice</h3>
+
+                    <p>
+                        Fried rice prepared with vegetables and special spices
+                    </p>
+
+                </div>
+
+                <span class="price">₹140</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Veg Meals</h3>
+
+                    <p>
+                        Complete traditional meal with rice, curry and sides
+                    </p>
+
+                </div>
+
+                <span class="price">₹120</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= BEVERAGES ================= -->
+
+        <section class="menu-section beverages">
+
+            <h2>Beverages</h2>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Masala Tea</h3>
+
+                    <p>
+                        Hot tea prepared with aromatic spices
+                    </p>
+
+                </div>
+
+                <span class="price">₹20</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Cold Coffee</h3>
+
+                    <p>
+                        Chilled creamy coffee topped with foam
+                    </p>
+
+                </div>
+
+                <span class="price">₹60</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Fresh Lime Juice</h3>
+
+                    <p>
+                        Refreshing lime juice served chilled
+                    </p>
+
+                </div>
+
+                <span class="price">₹50</span>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3>Fresh Fruit Juice</h3>
+
+                    <p>
+                        Freshly prepared seasonal fruit juice
+                    </p>
+
+                </div>
+
+                <span class="price">₹60</span>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Foodie Corner | Fresh Food, Great Taste
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+/* ==============================
+   GENERAL PAGE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #263238;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+================================= */
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* ==============================
+   MAIN HEADING
+================================= */
+
+h1 {
+    text-align: center;
+    background-color: #00695c;
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 35px;
+
+    font-size: 36px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   SECTION HEADINGS
+================================= */
+
+h2 {
+    color: #00695c;
+
+    font-size: 24px;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    padding-left: 12px;
+
+    border-left: 5px solid #ff8a65;
+}
+
+
+/* ==============================
+   LIST CONTAINERS
+================================= */
+
+ol,
+ul {
+    background-color: white;
+
+    padding: 20px 35px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   LIST ITEMS
+================================= */
+
+li {
+    margin: 10px 0;
+
+    padding: 5px;
+
+    font-size: 17px;
+}
+
+
+/* ==============================
+   HOVER EFFECT
+================================= */
+
+li:hover {
+    background-color: #e0f2f1;
+
+    border-radius: 6px;
+
+    padding-left: 10px;
+
+    transition: 0.2s;
+}
+
+
+/* ==============================
+   NESTED LIST
+================================= */
+
+li ul {
+    margin-top: 8px;
+    margin-bottom: 5px;
+
+    background-color: #f1f8f7;
+
+    box-shadow: none;
+
+    border-left: 4px solid #80cbc4;
+}
+
+
+/* ==============================
+   ORDERED LIST NUMBERS
+================================= */
+
+ol li::marker {
+    color: #00695c;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   UNORDERED LIST BULLETS
+================================= */
+
+ul li::marker {
+    color: #ff7043;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    ol,
+    ul {
+        padding: 15px 25px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+}
